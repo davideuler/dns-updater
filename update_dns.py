@@ -123,7 +123,7 @@ if not now_ip == previous_ip:
     print("Gonna to update ip:" + get_now_ip())
     current_datetime = datetime.now()
     formatted_datetime = current_datetime.strftime("%Y-%m-%d %H%M%S")
-    content = "config_ip='%s'; update_date='%s'" % (now_ip,formatted_datetime)
+    content = "config_ip='%s'; update_date='%s';\n" % (now_ip,formatted_datetime)
     with open(my_ip_file, 'a') as file:
         # Write the text content to the file
         file.write(content)
